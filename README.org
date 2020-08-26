@@ -1,0 +1,16 @@
+* Haskell project template using nix,lorri,niv
+** Description
+This is a minimal Haskell project template using Nix.
+It's minimal and simple. Maybe same as what you will find when you google how to make Haskell project using Nix.
+Just made for personal use. I don't think it's perfect but I want a template to make things easier.
+** Usage
+#+BEGIN_SRC
+git clone https://github.com/btwiusegentoo/haskellnixtemplate <projectname>
+cd <projectname>
+# delete redundant files
+rm -rf .git
+# init new project
+git init
+cabal init
+cabal2nix . > default.nix
+#+END_SRC
