@@ -1,6 +1,7 @@
 { pkgs }:
 let
     haskellDeps = ps: with ps; [
+        haskell-language-server
         base
         cabal-install
         lens

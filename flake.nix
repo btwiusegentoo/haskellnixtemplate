@@ -11,7 +11,7 @@
           pkgs = nixpkgs.legacyPackages.${system};
         in {
           defaultPackage = pkgs.haskellPackages.callPackage ./default.nix {};
-          devShell = import ./shell.nix {};
+          devShell = import ./shell.nix { inherit pkgs; };
         }
       );
 }
