@@ -1,13 +1,12 @@
+{ pkgs }:
 let
-    sources = import ./nix/sources.nix;
-    pkgs = import sources.nixpkgs {};
     haskellDeps = ps: with ps; [
         base
         cabal-install
         lens
         mtl
     ];
-    ghc = pkgs.haskellPackages.ghcWithPackages haskellDeps;
+    ghc = pkgs.haskellPackages.ghcWithHoogle haskellDeps;
 
     nixPackages = with pkgs; [
         ghc

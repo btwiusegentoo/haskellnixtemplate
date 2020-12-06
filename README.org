@@ -1,4 +1,4 @@
-* Haskell project template using nix,lorri,niv
+* Haskell project template using nix flakes, direnv
 ** Description
 This is a minimal Haskell project template using Nix.
 It's minimal and simple. Maybe same as what you will find when you google how to make Haskell project using Nix.
